@@ -24,8 +24,9 @@ const Preparedbeforeourcall = () => {
             <Grid container  item sm={isSmallScreen ? '6' : '12'}>
             <Grid container  item xs={isXSmallScreen ? '12' :'6'}>
             <div className={classes.title}>
-                <Typography className={classes.firstTitle}>Get prepared before our call  </Typography>
-                <Typography className={classes.scondTitle}>Required Documents & Procedures  </Typography>
+                <Typography className={classes.firstTitle}><FormattedMessage id="prepare.headline" /> 
+                    </Typography>
+                <Typography className={classes.scondTitle}><FormattedMessage id="prepare.subtitle" />   </Typography>
             </div>
     <Grid container item sm={6} xs={12}className={classes.continerone} spacing={3}>
                
@@ -38,8 +39,8 @@ const Preparedbeforeourcall = () => {
                  <div></div>
                  </Avatar>
                    <Typography className={classes.text1}>
-                   {/* <FormattedMessage id="howItWorks.secondPoint.title" />   */}
-                   The car must be brought in good working condition
+                   <FormattedMessage id="prepared.rules.first" />  
+                   
                    </Typography>
                    </div>
 
@@ -48,9 +49,8 @@ const Preparedbeforeourcall = () => {
                  <div></div>
                  </Avatar>
                    <Typography className={classes.text2}>
-                   {/* <FormattedMessage id="howItWorks.secondPoint.subtitle" />  */}
-                   In case the chassis is not OK, we'll do a registration 
-                  test (AED 170 is the cost).
+                   <FormattedMessage id="prepared.rules.second" /> 
+                  
                    </Typography>
                    </div>
 
@@ -59,8 +59,7 @@ const Preparedbeforeourcall = () => {
                  <div></div>
                  </Avatar>
                    <Typography className={classes.text3}>
-                   The commission is 5% for GCC cars and 7% for
-                 imported cars (minimum commission 1000 AED).
+                   <FormattedMessage id="prepared.rules.third" /> 
                    </Typography>
                    </div>
 
@@ -69,7 +68,7 @@ const Preparedbeforeourcall = () => {
                  <div></div>
                  </Avatar>
                    <Typography className={classes.text4}>
-                   If the item is sold, the check will be deposit in your bank account after 10 working days from the time of auction’s conclusion
+                   <FormattedMessage id="prepared.rules.fourth" /> 
                    </Typography>
                    </div>
                    </div>
@@ -85,20 +84,28 @@ const Preparedbeforeourcall = () => {
                 <Avatar className={classes. Circle}>
                  <div></div>
                  </Avatar>
-                   <Typography className={classes.text1}>
+                   <Typography className={classes.text5}>
                    {/* <FormattedMessage id="howItWorks.secondPoint.title" />   */}
-                   If the car is sold for less than AED 5,000, the company 
-commission is only AED 500.
+                   <FormattedMessage id="prepared.rules.fifth" />
                    </Typography>
                    </div>
 
                    <div>
-                   <Avatar className={classes.Circle}>
+                   <Avatar className={classes.Circle2}>
                  <div></div>
                  </Avatar>
-                   <Typography className={classes.text2}>
+                   <Typography className={classes.text6}>
                    {/* <FormattedMessage id="howItWorks.secondPoint.subtitle" />  */}
-                   For the classic cars, trucks and heavy equipment, you must bring export test only and the commission is 7% (minimum commission 1000 AED).
+                   <FormattedMessage id="prepared.rules.sixth" />
+                   </Typography>
+                   </div>
+
+                   <div>
+                   <Avatar className={classes. Circle3}>
+                 <div></div>
+                 </Avatar>
+                   <Typography className={classes.text7}>
+                   <FormattedMessage id="prepared.rules.seventh" />
                    </Typography>
                    </div>
 
@@ -106,17 +113,8 @@ commission is only AED 500.
                    <Avatar className={classes. Circle}>
                  <div></div>
                  </Avatar>
-                   <Typography className={classes.text3}>
-                   For the equipment (generator, scissor lift, electric forklift ..... etc) Tax invoice is required.
-                   </Typography>
-                   </div>
-
-                   <div>
-                   <Avatar className={classes. Circle}>
-                 <div></div>
-                 </Avatar>
-                   <Typography className={classes.text4}>
-                   We'll do a comprehensive test (AED 300 is the cost).
+                   <Typography className={classes.text8}>
+                   <FormattedMessage id="prepared.rules.eight" />
                    </Typography>
                    </div>
                    </div>

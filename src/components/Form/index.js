@@ -20,6 +20,7 @@ import { DataContext } from "../../context/dataContext";
 import { useMediaQuery } from "@material-ui/core";
 import { Select, MenuItem, FormControl, InputLabel } from "@material-ui/core";
 import { FormattedMessage, useIntl } from "react-intl";
+import { LocalizationContext } from "../../context/LocalizationContext";
 
 export default function Form() {
   const classes = makeStyles();
@@ -34,6 +35,7 @@ export default function Form() {
   const [selectedMakeModels, setSelectedMakeModels] = useState();
   const [error, setError] = useState(false);
   const [errors, setErrors] = useState(false);
+  const [locale, setLocale] = useContext(LocalizationContext);
   console.log(MakeModels);
 
   useEffect(() => {
@@ -60,10 +62,10 @@ export default function Form() {
     const regExp = /[a-zA-Z]/g;
     regExp.test(event.target.value) ? setError(true) : setError(false);
   };
-  const handleChangeName = (event) =>{
-    const regex = /ab+c/;
+  const handleChangeName = (event) => {
+    const regex = /^\d/;
     regex.test(event.target.value) ? setErrors(true) : setErrors(false);
-  }
+  };
   // <VideoPlayer url={VIDEO} poster={poster} width={400} height={300} autoplay />;
   return (
     <Grid container item sm={isSmallScreen ? "6" : "12"}>
@@ -74,29 +76,29 @@ export default function Form() {
         xs={isXSmallScreen ? "12" : "6"}
       >
         <Grid xs={12} className={classes.title}>
-          <Typography className={classes.firstTitle}> 
-          <FormattedMessage id="startToday.title" />
-           </Typography>
+          <Typography className={classes.firstTitle}>
+            <FormattedMessage id="startToday.title" />
+          </Typography>
           <Typography className={classes.scondTitle}>
-          <FormattedMessage id="startToday.subtitle" />
+            <FormattedMessage id="startToday.subtitle" />
           </Typography>
         </Grid>
 
         <Grid sm={6} xs={12} className={classes.video}>
-          <VideoPlayer url={VIDEO} poster={poster} borderRadius={15}  />
+          <VideoPlayer url={VIDEO} poster={poster} borderRadius={15} />
           <div className={classes.SellCar}>
-           <Typography className={classes.sellcarwithus}>
-           <FormattedMessage id="startToday.videoSection.first" />
-           </Typography>
+            <Typography className={classes.sellcarwithus}>
+              <FormattedMessage id="startToday.videoSection.first" />
+            </Typography>
             <Typography className={classes.support}>
               {" "}
               <FormattedMessage id="startToday.videoSection.second" />{" "}
             </Typography>
             <Typography className={classes.process}>
-            <FormattedMessage id="startToday.videoSection.third" />
+              <FormattedMessage id="startToday.videoSection.third" />
             </Typography>
             <Typography className={classes.Ready}>
-            <FormattedMessage id="startToday.videoSection.fourth" />
+              <FormattedMessage id="startToday.videoSection.fourth" />
             </Typography>
           </div>
         </Grid>
@@ -104,15 +106,19 @@ export default function Form() {
           <Grid className={classes.paper} item xs={isXSmallScreen ? "12" : "6"}>
             <form className={classes.form} noValidate>
               <Typography className={classes.details}>
-              <FormattedMessage id="startToday.formSection.headline" />
+                <FormattedMessage id="startToday.formSection.headline" />
               </Typography>
               <FormControl className={classes.formControl}>
-                <InputLabel><FormattedMessage id="startToday.formSection.firstLabel" /></InputLabel>
+                <InputLabel>
+                  <FormattedMessage id="startToday.formSection.firstLabel" />
+                </InputLabel>
                 <select
-                className={classes.zeinab}
+                  className={classes.zeinab}
                   value={selectedMakeModels}
                   onChange={handleMenuItemClick}
-                  placeholder={<FormattedMessage id="startToday.formSection.SelectBrand" />}
+                  placeholder={
+                    <FormattedMessage id="startToday.formSection.SelectBrand" />
+                  }
                 >
                   {makes.map((MakeModels) => (
                     <option value={MakeModels}>{MakeModels}</option>
@@ -121,13 +127,15 @@ export default function Form() {
               </FormControl>
 
               <FormControl className={classes.formControl}>
-                <InputLabel><FormattedMessage id="startToday.formSection.secondLabel" /></InputLabel>
+                <InputLabel>
+                  <FormattedMessage id="startToday.formSection.secondLabel" />
+                </InputLabel>
 
                 <select
                   className={classes.zeinab}
                   value={selectedMakeModels}
                   onChange={handleSelectedMakeModels}
-                //  placeholder= {<FormattedMessage id="startToday.formSection.headline" />}
+                  //  placeholder= {<FormattedMessage id="startToday.formSection.headline" />}
                 >
                   {filtered.map((Models) => (
                     <option value={Models}>{Models}</option>
@@ -136,31 +144,33 @@ export default function Form() {
               </FormControl>
 
               <Typography className={classes.contactInfo}>
-              <FormattedMessage id="startToday.formSection.headline2" />
+                <FormattedMessage id="startToday.formSection.headline2" />
               </Typography>
-              <Typography className={classes.fullname}>Your Full Name</Typography>
+              <Typography className={classes.fullname}>
+              {locale == "en" ? " Your Phone Number" : "إدخل اسمك"}
+              </Typography>
 
               <TextField
-              
                 error={errors}
                 onChange={(x) => handleChangeName(x)}
-                // label= "Your Full Name"
+                label={locale == "en" ? "Enter Full Name" : "من فضلك إدخل اسمك"}
                 id="outlined-error-helper-text"
                 placeholder="Enter your full name"
                 margin="normal"
                 required
                 fullWidth
                 type="text"
-                
                 // helperText="Incorrect entry Your Full Name"
                 variant="outlined"
               />
-                <Typography className={classes.PhoneNumber}>Your Phone Number</Typography>
+              <Typography className={classes.PhoneNumber}>
+              {locale == "en" ? " Your Phone Number" : " رقم الهاتف"}
+              </Typography>
               <TextField
                 error={error}
                 onChange={(e) => handleChangeNumber(e)}
                 id="outlined-error-helper-text"
-                // label="Your Phone Number"
+                label={locale == "en" ? "entry Your Phone Number" : "من فضلك إدخل رقم الهاتف"}
                 placeholder="EX: +972 897 564 34"
                 margin="normal"
                 required
@@ -174,7 +184,7 @@ export default function Form() {
                 variant="contained"
                 className={classes.submit}
               >
-               <FormattedMessage id="startToday.formSection.sendBtn" />
+                <FormattedMessage id="startToday.formSection.sendBtn" />
               </Button>
             </form>
           </Grid>
