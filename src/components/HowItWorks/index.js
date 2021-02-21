@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useContext} from "react";
 import makeStyles from "./Style";
 import { useTheme } from "@material-ui/core/styles";
 import { Grid, Typography } from "@material-ui/core";
@@ -7,11 +7,13 @@ import IMGRED from "../../assets/images//red-bg.png";
 import BID_ICON from "../../assets/icons/bid-icon.png";
 import Avatar from '@material-ui/core/Avatar';
 import { FormattedMessage } from "react-intl";
+import { LocalizationContext } from "../../context/LocalizationContext";
 
 const HowItWorks = () => {
   const classes = makeStyles();
   const theme = useTheme();
   const [spacing, setSpacing] = React.useState(0);
+  const [locale, switchLocale] = useContext(LocalizationContext);
   const isSmallScreen = useMediaQuery(theme.breakpoints.only("sm"));
   const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   return (
@@ -38,7 +40,8 @@ const HowItWorks = () => {
                 </Typography>
               </Grid>
               <div  >
-              <div   className={classes.containerSteps}>
+              <div  className={locale=="en"?classes.containerSteps:classes.containerSteps2}>
+              
 
                 <div className={classes.StepOne}>
                 
@@ -47,10 +50,10 @@ const HowItWorks = () => {
            <div>1</div>
           </Avatar>
         
-                  <Typography className={classes.textStepOne}>
+                  <Typography className={locale=="en"?classes.textStepOne:classes.textStepOne2}>
                   <FormattedMessage id="howItWorks.firstPoint.title" />  
                   </Typography>
-                  <Typography className={classes.textStep1}>
+                  <Typography className={locale=="en"?classes.textStep1:classes.textStep12}>
                   <FormattedMessage id="howItWorks.firstPoint.subtitle" />  
                   </Typography>
                 </div>
@@ -61,10 +64,10 @@ const HowItWorks = () => {
                 <div>2</div>
                 </Avatar>
         <div className={classes. containersteptwo}>
-                  <Typography className={classes.textSteptwo}>
+                  <Typography  className={locale=="en"?classes.textSteptwo:classes.textSteptwo2}>
                   <FormattedMessage id="howItWorks.secondPoint.title" />  
                   </Typography>
-                  <Typography className={classes.textStep2}>
+                  <Typography  className={locale=="en"?classes.textStep2:classes.textStep22}>
                   <FormattedMessage id="howItWorks.secondPoint.subtitle" /> 
                   </Typography>
                   </div>

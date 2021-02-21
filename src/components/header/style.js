@@ -31,6 +31,15 @@ export default makeStyles(
       },
     
     },
+    logoea2:{
+      width: "242px",
+      height: "75px",
+      objectFit: "contain",
+      display: "flex !important",
+      marginTop: "-10px",
+      padding: " 0px 140px 0 0px !important",
+
+    },
 
     btn: {
       width: "108px !important",
@@ -57,6 +66,27 @@ export default makeStyles(
       [theme.breakpoints.only("sm")]: {
         marginLeft: '1006px',
       },
+    },
+
+    btn2:{
+      width: "108px !important",
+      height: "48px !important",
+      right: "83% !important",
+      top: "21% !important",
+      backgroundColor: "#ec1c24 !important",
+      color: "#fff !important",
+      borderRadius: "5px !important",
+      marginTop: "-76px !important",
+      fontStyle: "normal !important",
+      lineHeight: "normal !important",
+      letterSpacing: "normal !important",
+      textAlign: "center !important",
+      boxShadow: "0 2px 7px 0 rgba(255, 0, 0, 0.19)!important",
+      "&:hover": {
+        backgroundColor: "#ec1c24 !important",
+        color: "#fff !important",}
+      
+
     },
   }),
   { index: 1 }

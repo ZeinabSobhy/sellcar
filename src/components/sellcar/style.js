@@ -50,6 +50,13 @@ export default makeStyles((theme) => ({
       marginTop: "505px !important",
       marginLeft: "402px !important",
     },
+    [theme.breakpoints.only("sm")]: {
+     
+      padding: '346px 0 0 84px',
+
+      
+    },
+    
   },
   FirstText: {
     whiteSpace: "nowrap",

@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export default makeStyles((theme) => ({
 	homecontenir: {
 		width: '100%',
-        height: '591vh',
+        height: '575vh',
         //  padding: '30px 0 100px',
         backgroundColor: '#ffffff',
 

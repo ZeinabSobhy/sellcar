@@ -9,7 +9,7 @@ export default makeStyles( (theme) => ({
 		display: 'flex !important',
         objectFit: 'contain',
         backgroundSize: "cover",
-        marginTop: '-47px  !important',
+        marginTop: '-1px  !important',
         margin: theme.spacing(0, 0),
 
                 [theme.breakpoints.down('xs')]:{
@@ -158,6 +158,11 @@ export default makeStyles( (theme) => ({
     containerSteps:{
         display:'flix',
         marginTop: '-14px'
+        
+
+    },
+    containerSteps2:{
+        margin:' -14px 71px 0 0',
 
     },
    
@@ -222,6 +227,17 @@ export default makeStyles( (theme) => ({
         textAlign: 'center',
        
     },
+    textStepOne2:{
+        width: '110px',
+        height: '21px',
+        margin: '0 59px 8px 0',
+        fontSize: '16px',
+        fontWeight: '500',
+        lineHeight: 'normal',
+        letterSpacing: '-0.44px',
+        textAlign: 'center',
+
+    },
     textStep1:{
         width: '354px',
           height: '18px',
@@ -231,6 +247,16 @@ export default makeStyles( (theme) => ({
        lineHeight: '1.29',
       letterSpacing: 'normal',
   
+    },
+    textStep12:{
+        width: '354px',
+        height: '18px',
+        margin: '0 20px 8px 0',
+      fontSize: '14px',
+      fontWeight: 'normal',
+     lineHeight: '1.29',
+    letterSpacing: 'normal',
+
     },
     Steptwo:{
         
@@ -255,6 +281,17 @@ export default makeStyles( (theme) => ({
         
 
     },
+    textSteptwo2:{
+        width: '187px',
+        height: '21px',
+        margin: '0 59px 8px 0',
+        fontSize: '16px',
+        fontWeight: '500',
+        lineHeight: 'normal',
+        letterSpacing: '-0.44px',
+        textAlign: 'center',
+
+    },
     textStep2:{
     width: '438px',
   height: '18px',
@@ -264,6 +301,16 @@ export default makeStyles( (theme) => ({
   lineHeight: '1.29',
   letterSpacing: 'normal',
   
+    },
+    textStep22:{
+        width: '438px',
+  height: '18px',
+  margin: '0px -20px 8px 0',
+  fontSize: '14px',
+  fontWeight: 'normal',
+  lineHeight: '1.29',
+  letterSpacing: 'normal',
+
     },
     Stepthird:{
         fontStretch: 'normal',

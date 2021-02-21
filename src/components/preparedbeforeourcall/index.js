@@ -24,9 +24,9 @@ const Preparedbeforeourcall = () => {
             <Grid container  item sm={isSmallScreen ? '6' : '12'}>
             <Grid container  item xs={isXSmallScreen ? '12' :'6'}>
             <div className={classes.title}>
-                <Typography className={classes.firstTitle}><FormattedMessage id="prepare.headline" /> 
+                <Typography className={classes.firstTitle}><FormattedMessage id="prepared.headline" /> 
                     </Typography>
-                <Typography className={classes.scondTitle}><FormattedMessage id="prepare.subtitle" />   </Typography>
+                <Typography className={classes.scondTitle}><FormattedMessage id="prepared.subtitle" />   </Typography>
             </div>
     <Grid container item sm={6} xs={12}className={classes.continerone} spacing={3}>
                

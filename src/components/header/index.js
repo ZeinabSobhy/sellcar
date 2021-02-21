@@ -29,7 +29,8 @@ const Header = () => {
             height: isSmallScreen && "175px",
           }}
         >
-          <div className={classes.logoea}>
+          <div 
+          className={locale=="en"?classes.logoea:classes.logoea2}>
             <img
               style={{
                 cursor: "pointer",
@@ -46,9 +47,11 @@ const Header = () => {
               onClick={() =>
                 locale == "en" ? switchLocale("ar") : switchLocale("en")
               }
-              className={classes.btn}
+              
+              className={locale=="en"?classes.btn:classes.btn2}
             >
               <Typography className={classes.textbtn}>
+                
                 <FormattedMessage id="header.btn" />
               </Typography>
             </Button>

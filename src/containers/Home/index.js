@@ -9,6 +9,8 @@ import HowItWorks from '../../components/HowItWorks';
 import Form from '../../components/Form/index';
 import Services from '../../components//Services/index';
 import  Preparedbeforeourcall from '../../components//preparedbeforeourcall/index';
+import RequiredDocumentation from '../../components/Required Documentation/index';
+import Footer from '../../components/Footer//index';
 function Home() {
   const classes = makeStyles();
   const theme = useTheme();
@@ -25,6 +27,8 @@ function Home() {
         <Form/>
         <Services/>
         < Preparedbeforeourcall/>
+        <RequiredDocumentation/>
+        <Footer/>
       
       
     </Grid>
