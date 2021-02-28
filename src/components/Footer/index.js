@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
-import makeStyles from "./style";
-import { useTheme } from "@material-ui/core/styles";
+
+
+
+import React, { useContext} from "react";
 import LOGOEA from "../../assets/images/logo-ea.svg";
-import { Grid, Typography } from "@material-ui/core";
 import { useMediaQuery, Button } from "@material-ui/core";
 import { LocalizationContext } from "../../context/LocalizationContext";
 import { FormattedMessage } from "react-intl";
@@ -11,34 +11,31 @@ import GOOLE_ICON from '../../assets/icons/goole.png';
 import insta_ICon from '../../assets/icons/instagram.png';
 import Twiter_icon from '../../assets/icons/twitter-light.png';
 import YOUTUBE_ICON from '../../assets/icons/youtube-light.png';
+import "../../components/Footer/style.scss";
 import LOGO from '../../assets//images//logo.png';
 
 const Footer = () => {
-  const classes = makeStyles();
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.only("sm"));
-  const isXSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
-  const [locale, switchLocale] = useContext(LocalizationContext);
+	  const [locale, switchLocale] = useContext(LocalizationContext);
 
-  return (
-      <Grid container  item xs={12} sm={6} lg={6} className={classes.root}>
-          <Grid  container className={classes.com1} >
-              <div >
-                  <Typography className={classes.text1}>
+	  return(
+		  <div className="footer">
+			  
+
+			  <div className="icon_footer">
+				  <div className="title_icon">
 				  <FormattedMessage id="footer.social" />
-                  </Typography>
-                  <div className={classes.continersocial}>
-                      <div className={classes.social1}>
+				  </div>
+				  <div className="icon">
+				  <div className="social1">
                                            <a
 											target="_blank"
 											href="https://www.facebook.com/emiratesauction/"
 										>
 											<img
 												style={{
-													// marginInlineEnd: '12px',
+													
 													cursor: 'pointer',
-													// width: isSmallScreen && '46px',
-													// height: isSmallScreen && '46px',
+													
 												}}
 												src={ FEC_ICON }
 												alt="facebook"
@@ -46,17 +43,16 @@ const Footer = () => {
 										</a>
                                         </div>
                                         
-                                        <div className={classes.social2}>
+                                        <div className="social1">
                                         <a
 											target="_blank"
 											href="https://twitter.com/emiratesauction"
 										>
 											<img
 												style={{
-													// marginInlineEnd: '12px',
+													
 													cursor: 'pointer',
-													// width: isSmallScreen && '46px',
-													// height: isSmallScreen && '46px',
+													
 												}}
 												src={Twiter_icon}
 												alt="twiter"
@@ -67,17 +63,16 @@ const Footer = () => {
                                         </div>
 
 
-                                        <div className={classes.social3}>
+                                        <div className="social1">
                                         <a
 											target="_blank"
 											href="https://www.youtube.com/user/emiratesauction"
 										>
 											<img
 												style={{
-													// marginInlineEnd: '12px',
+													
 													cursor: 'pointer',
-													// width: isSmallScreen && '46px',
-													// height: isSmallScreen && '46px',
+												
 												}}
 												src={YOUTUBE_ICON}
 												alt="YOUTUBE"
@@ -87,17 +82,16 @@ const Footer = () => {
 
                                         </div>
 
-                                        <div className={classes.social4}>
+                                        <div className="social1">
                                         <a
 											target="_blank"
 											href="https://www.instagram.com/emiratesauction/"
 										>
 											<img
 												style={{
-													// marginInlineEnd: '12px',
+													
 													cursor: 'pointer',
-													// width: isSmallScreen && '46px',
-													// height: isSmallScreen && '46px',
+													
 												}}
 												src={insta_ICon}
 												alt="insta"
@@ -106,17 +100,16 @@ const Footer = () => {
                                             
 
                                         </div>
-                                        <div className={classes.social5}>
+                                        <div className="social1">
                                         <a
 											target="_blank"
 											href="https://www.instagram.com/emiratesauction/"
 										>
 											<img
 												style={{
-													// marginInlineEnd: '12px',
+												
 													cursor: 'pointer',
-													// width: isSmallScreen && '46px',
-													// height: isSmallScreen && '46px',
+													
 												}}
 												src={ GOOLE_ICON}
 												alt=" GOOLE"
@@ -128,40 +121,29 @@ const Footer = () => {
                                         </div>
 
 
+				  </div>
 
+			  </div>
 
-                  </div>
-                  
-              
-              </div>
-
-          </Grid>
-
-          <Grid  container  item xs={12} sm={6} lg={6}>
-              <div className={classes.com2}>
-              <div className={classes.logoea}>
+			  <div className="logo_footer">
+			  <div className="logoea2">
             <img
               style={{
                 cursor: "pointer",
-                // width: isSmallScreen && "242px",
-                // height: isSmallScreen && "75px",
+               
               }}
               src={LOGOEA}
               alt="LOGO"
             />
           </div>
-          <div className={classes.text2}>
+          <div className="text2">
 		  <FormattedMessage id="footer.subtitle" />
               
 
           </div>
+			  </div>
 
-              </div>
-
-          </Grid>
-
-      </Grid>
-   
-  );
-};
-export default Footer;
+		  </div>
+	  )
+}
+export default Footer

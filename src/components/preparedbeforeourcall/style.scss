@@ -1,0 +1,96 @@
+
+@import "../style//color.scss";
+.root{
+    width: 100%;
+    height: 85.03vh;
+};
+.prepared_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Roboto;
+    font-stretch: normal;
+    font-style: normal;
+    margin: 7.375rem 0 0 0;
+};
+.first_title_prepared{
+    font-family: Roboto;
+  font-size: 35px;
+  font-weight: bold;
+  line-height: 1.77;
+  letter-spacing: -0.73px;
+  text-align: center;
+  color: #000000;
+};
+.scond_title_prepared{
+    font-family: Roboto;
+  font-size: 18px;
+  font-weight: normal;
+  letter-spacing: -0.45px;
+  text-align: center;
+  color: #595f6f;
+};
+.prepared_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 0 0 0;
+};
+.li{
+    display: flex;
+    flex-direction: row;
+};
+.text_prepared{
+    font-family: Roboto;
+  font-size: 18px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.44;
+  letter-spacing: -0.5px;
+  color: #595f6f;
+  margin: 15px 0 0 20px;
+  width: 369px;
+}
+.Circle_list{
+width: 10px !important;
+height: 10px !important;
+  border-Radius: -67px !important;
+
+  bottom: -22px;
+  box-Shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+  background-Image: linear-gradient(225deg, #ec1c24, #f91c3d);
+
+};
+.Circle_list_AR{
+    width: 10px !important;
+height: 10px !important;
+  border-Radius: -67px !important;
+  margin-left: 15px;
+  bottom: -22px;
+  box-Shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+  background-Image: linear-gradient(225deg, #ec1c24, #f91c3d);
+}
+@media screen and (max-width: 960px) {
+    .root{
+        width: 960px;
+        height: 85.03vh;
+    };
+    .prepared_title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family: Roboto;
+        font-stretch: normal;
+        font-style: normal;
+        margin: 7.375rem 0 0 0;
+    };
+    .prepared_list{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 20px 0 0 0;
+    };
+}
+

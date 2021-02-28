@@ -71,7 +71,9 @@ export default {
 	},
 	services:{
 		headline:'Why use our services?\n' ,
-		subtitle:'We operates 24 hour/7 day-a-week telephone, email & remote support services that is staffed to handle any issue or question\n' ,
+		subtitle:'We operates 24 hour/7 day-a-week telephone, email & remote support ',
+		subtitle2:'services that is staffed to handle any issue or question\n ',
+		
 		firstCard:{
 			headline:'Easy Process',
 			subtitle:'We help you save time and effort. We master how to sell a car privately and have simplified the process of selling a vehicle to make it hassle-free.',

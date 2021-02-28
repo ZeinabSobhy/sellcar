@@ -1,0 +1,76 @@
+@import "../style/color.scss";
+
+.header {
+  width: 100%;
+  height: 10vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 50px;
+    align-items: flex-end;
+  }
+  
+
+    .logo {
+     display: flex;
+     flex-direction: row;
+     justify-content: flex-start;
+      width: 10rem;
+      height: 75px;
+      margin: 0 140px 0 140px;
+    }
+     
+
+    .button {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  cursor: pointer;
+  margin: 0 140px 0 140px;
+    }
+    .btn{
+      font-size: 16px;
+      font-family: Roboto;
+    font-weight: 600;
+    align-items: center;
+    color: $white;
+    background-color:$red;
+    width: 6.75rem;
+    height: 6.3vh;
+    border-radius: 0.313rem;
+    
+    }
+  
+
+  @media screen and (max-width: 960px) {
+    .header {
+
+      width: 960px;
+      height:  10vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+      }
+  
+
+    .logo {
+     display: flex;
+     flex-direction: row;
+      width: 10rem;
+      height: 75px;
+      justify-content: flex-start;
+      margin: 0 50px 0 50px;
+    }
+    
+      .button {
+        display: flex;
+        flex-direction: row;
+        justify-content:flex-end !important;
+        flex-wrap: nowrap;
+        margin: 0 50px 0 0;
+      }
+    
+}

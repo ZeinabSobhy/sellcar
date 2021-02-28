@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import useStyles from "../App/Style";
 import { useIntl } from "react-intl";
 import Home from "../Home/index";
+import Form from "../../components/Form/index";
 
 import { Backdrop, CircularProgress } from "@material-ui/core";
 
@@ -21,6 +22,7 @@ const App = () => {
       <switch> 
           
         <Route exact path="/" component={Home} />
+        <Route exact path="/Form" component={Form}/>
       </switch>
     </Suspense>
    

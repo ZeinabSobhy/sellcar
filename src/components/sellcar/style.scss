@@ -1,0 +1,141 @@
+
+
+@import "../style/color.scss";
+.sellcar {
+  width: 100%;
+  height: 78.7vh;
+  &_wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background-size: cover;
+  };}
+
+  .sellcar__img{
+    background-size: cover;
+    height: 78.9vh;
+    margin-top: 30px;
+    
+  }
+
+  .sellcar__TextContiner{
+    height: 12.2vh;
+    font-family: "Roboto";
+    font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  color:$white;
+  padding: 25.188rem 0 0 0;
+  }
+  .sellcar__Title{
+    font-size: 35px;
+    letter-spacing: -0.73px;
+    
+  }
+  .sellcar__Title1{
+    font-size: 50px;
+  }
+  .sellcar__Title2{
+    font-size: 25px;
+    letter-spacing: -0.52px;
+  };
+  .start_today{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .start_today_AR{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.start_btn{
+ 
+  align-items: center;
+  z-index: 1;
+  width: 147px;
+  height: 48px;
+  padding: 0 0 5px 0;
+  border-radius: 5px;
+  margin: 71px 1px 0 95px;
+  background-color: #ec1c24;
+  
+};
+.start_btn_AR{
+  align-items: center;
+  z-index: 1;
+  width: 147px;
+  height: 48px;
+  padding: 0 0 5px 0;
+  border-radius: 5px;
+  margin: 71px 84px 0 0;;
+  background-color: #ec1c24;
+}
+.text_btn_start{
+  align-items: flex-start;
+  color: $white;
+
+};
+.icon_start{
+  color: $white;
+  align-items: center;
+  margin: 0 0 -7px 0;
+}
+
+
+@media screen and (max-width: 960px){
+
+  .sellcar {
+    width: 960px;
+    height: 78.7vh;
+    &_wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      background-size: cover;
+    };
+  .sellcar__img{
+    background-size: cover;
+    height: 78.7vh;
+    width: 104%;
+    margin: 50px 0 0 0;
+  }
+
+  .sellcar__TextContiner{
+    height: 12.2vh;
+    font-family: "Roboto";
+    font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: center;
+  color:$white;
+  padding: 25.188rem 0 0 0;
+
+}
+.start_btn{
+ 
+  align-items: center;
+  z-index: 1;
+  width: 147px;
+  height: 48px;
+  padding: 0 0 5px 0;
+  border-radius: 5px;
+  margin: 40px 1px 0 95px;
+  background-color: #ec1c24;
+  
+};
+.start_btn_AR{
+  align-items: center;
+  z-index: 1;
+  width: 147px;
+  height: 48px;
+  padding: 0 0 5px 0;
+  border-radius: 5px;
+  margin: 40px 84px 0 0;;
+  background-color: #ec1c24;
+}
+}
+}
