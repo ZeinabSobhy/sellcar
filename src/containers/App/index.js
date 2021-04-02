@@ -2,11 +2,11 @@ import React, { lazy, Suspense,  } from "react";
 import { Route, Switch } from "react-router-dom";
 import useStyles from "../App/Style";
 import { useIntl } from "react-intl";
-import Home from "../Home/index";
-import Form from "../../components/Form/index";
+import containers from "../../containers/containers/index"
+import About from "../../components/About/index"
+
 
 import { Backdrop, CircularProgress } from "@material-ui/core";
-
 const App = () => {
   const classes = useStyles();
   const locale = useIntl().locale;
@@ -21,8 +21,10 @@ const App = () => {
     >
       <switch> 
           
-        <Route exact path="/" component={Home} />
-        <Route exact path="/Form" component={Form}/>
+        <Route exact path="/" component={containers} />
+        <Route exact path="/about" component={About} />
+
+       
       </switch>
     </Suspense>
    
